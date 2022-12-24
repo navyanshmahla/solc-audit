@@ -2,6 +2,7 @@ import {useState} from 'react';
 import axios from 'axios';
 import { toast} from 'react-toastify';
 import './fileupload.css'
+import {Link} from 'react-router-dom';
 
 
 export const FileUpload = ({onSuccess}) => {
@@ -41,7 +42,7 @@ export const FileUpload = ({onSuccess}) => {
                        multiple/>
             </div>
 
-            <button>Submit</button>
+            <Link to="/result"><button>Submit</button></Link>
         </form>
     )
 };

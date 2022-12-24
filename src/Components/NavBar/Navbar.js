@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from '../../assets/marsh.png';
+import {Link} from 'react-router-dom';
 
 function Navbar() {
 	const navRef = useRef();
@@ -17,6 +18,7 @@ function Navbar() {
 				<a href="/#">Tools</a>
 				<a href="/#">Blog</a>
 				<a href="/#">Contact Us</a>
+                <Link to="/user" >Hello User!</Link>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>

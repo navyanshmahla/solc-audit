@@ -1,6 +1,9 @@
 import React from 'react'
-import Navbar from '../NavBar/Navbar.js';
 import FileUpload from '../FileUpload/fileupload.js';
+import Navbar from '../NavBar/Navbar.js';
+import Footer from "../footer/footer";
+import {Link} from 'react-router-dom';
+
 
 export default function dashboard() {
     const styles = {
@@ -17,6 +20,8 @@ export default function dashboard() {
 
         <FileUpload/>
       </div>
+      <br/>
+      <Footer/>
         </React.Fragment>
     </div>
   )
