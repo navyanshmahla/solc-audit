@@ -62,6 +62,7 @@ export default function PersonalProfile() {
         </MDBRow>
       </MDBContainer>
       <Footer/>
+
     </section>
   );
 }

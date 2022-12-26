@@ -1,17 +1,22 @@
 
-import React, { useState } from "react"
+import React, { useState, useNavigate } from "react"
 import {Link} from 'react-router-dom';
-
+import { useAuth } from "../../utils/auth";
+import Navbar from "../NavBar/Navbar";
+import Footer from "../footer/footer"
 export default function (props) {
   let [authMode, setAuthMode] = useState("signin")
-  
+
   const changeAuthMode = () => {
     setAuthMode(authMode === "signin" ? "signup" : "signin")
   }
 
+
   if (authMode === "signin") {
     return (
+      
       <div className="Auth-form-container">
+
         <form className="Auth-form">
           <div className="Auth-form-content">
             <h3 className="Auth-form-title">Sign In</h3>
@@ -39,7 +44,7 @@ export default function (props) {
             </div>
             <div className="d-grid gap-2 mt-3">
             <Link to="/">
-              <button type="submit" className="btn btn-primary" style={{display:'flex', alignItems:'center',justifyContent:'center'}}>
+              <button type="submit" className="btn btn-primary" style={{display:'flex', alignItems:'center',justifyContent:'center'}} >
               Submit
               </button>
             </Link>
@@ -49,12 +54,14 @@ export default function (props) {
             </p>
           </div>
         </form>
+
       </div>
     )
   }
 
   return (
     <div className="Auth-form-container">
+
       <form className="Auth-form">
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">Sign In</h3>
@@ -90,7 +97,7 @@ export default function (props) {
           </div>
           <div className="d-grid gap-2 mt-3">
           <Link to="/">
-            <button type="submit" className="btn btn-primary" style={{display:'flex', alignItems:'center',justifyContent:'center'}}>
+            <button type="submit" className="btn btn-primary" style={{display:'flex', alignItems:'center',justifyContent:'center'}}  >
               Submit
             </button>
           </Link>
@@ -100,6 +107,7 @@ export default function (props) {
           </p>
         </div>
       </form>
+
     </div>
   )
 }
